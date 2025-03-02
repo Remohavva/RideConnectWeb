@@ -1,42 +1,113 @@
-
-
-<!DOCTYPE html> <html> <head> <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB CONNECT</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: red; /* Changed color to red */
+            padding: 10px;
+        }
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .top-nav a:hover {
+            color: #ffc107;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: red; /* Changed color to red */
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: black; /* Changed hover color to black */
+            color: #ffc107; /* Changed text color on hover */
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+        }
+        .login-box {
+            background-color: red; /* Changed color to red */
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .login-box a {
+            color: white;
+            text-decoration: none;
+        }
+        .login-box a:hover {
+            color: #ffc107;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Search.html">Search</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-                <li><a href="Customer Login.html">Customer Login</a></li>
-                <li><a href="Employee Login.html">Employee Login</a></li>
-                <li><a href="Customer Care.html">Customer Care</a></li>
-                <li><a href="Ratings.html">Ratings</a></li>
-            </ul>
-        </nav>
-    </header>
-<head>
-    
-    
-    
-    Click on Login for Existing Users!!
-    <style> body { font-family: Arial, sans-serif; }
-    /* Style the tab */ .tab { overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; }
-    
-    /* Style the buttons inside the tab */ .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; }
-    
-    /* Change background color of buttons on hover */ .tab button:hover { background-color: #ddd; }
-    
-    /* Create an active/current tablink class */ .tab button.active { background-color: #ccc; }
-    
-    /* Style the tab content */ .tabcontent { display: none; padding: 6px 12px; border: 1px solid #ccc; border-top: none; } </style>
-    
-    </head> <body> <h2>Customer Login/Signup</h2> <div class="tab"> <button class="tablinks" onclick="openCity(event, 'Login')">Login</button> <button class="tablinks" onclick="openCity(event, 'Signup')">Signup</button> </div> <div id="Login" class="tabcontent"> <h3>Login</h3> <form> <label for="email">Email:</label><br> <input type="text" id="email" name="email"><br> <label for="pwd">Password:</label><br> <input type="password" id="pwd" name="pswd"><br> <input type="submit" value="Submit"> </form> </div> <div id="Signup" class="tabcontent"> <h3>Signup</h3> <form> <label for="fname">Full Name:</label><br> <input type="text" id="fname" name="fname"><br> <label for="email">Email:</label><br> <input type="text" id="email" name="email"><br> <label for="pwd">Password:</label><br> <input type="password" id="pwd" name="pswd"><br> <label for="cpwd">Confirm Password:</label><br> <input type="password" id="cpwd" name="cpwd"><br> <label for="phn">Phone Number:</label><br> <input type="text" id="phn" name="phn"><br> <input type="submit" value="Submit"> </form> </div> <script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "block"; evt.currentTarget.className += " active"; } </script> 
-        <footer>
-            <p>&copy; 2023 RIDE CONNECT BY PROVERBS Website. All rights reserved.</p>
-        </footer></body> </html>
+    <div class="top-nav">
+        <div class="login-box">
+            <a href="Customer Login.html">Customer Login</a>
+        </div>
+        <div class="login-box">
+            <a href="Employee Login.html">Employee Login</a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a class="navbar-brand" href="#">RIDE CONNECT</a>
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link" href="Search.html">Search</a>
+        <a class="nav-link" href="Services.html">Services</a>
+        <a class="nav-link" href="Feedback.html">Feedback</a>
+        <a class="nav-link" href="Customer Care.html">Customer Care</a>
+        <a class="nav-link" href="Ratings.html">Ratings</a>
+    </div>
+    <div class="content">
+        <header>
+            <h1>Customer Care</h1>
+        </header>
+        <div class="customer-care">
+            <h2>Customer Care</h2>
+            <p>If you need help, you can contact our customer care department by phone, email, or postal mail. Please find the contact details below:</p>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Email:</strong> <a href="mailto:rideconnect@customercare.com">rideconnect@customercare.com</a></p>
+            <p><strong>Address:</strong> 6-9/420, DLF St, Hyderabad , India</p>
+            <button id="getPhone" onclick="getPhoneNumber()">Get a Phone Number</button>
+        </div>
+        <script>
+            let phoneNumber;
+            function getPhoneNumber() {
+                const phone = document.getElementById('phone');
+                const getPhoneButton = document.getElementById('getPhone');
+                if (phoneNumber === undefined) {
+                    phoneNumber = Math.floor(Math.random() * 10000000000);
+                    phone.innerHTML = phoneNumber;
+                    getPhoneButton.disabled = true;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,68 +1,97 @@
 body {
-    margin: 0%;
-    background-image: url('https://th.bing.com/th/id/OIG.7rym.XdohffhjZJelnLh?pid=ImgGn');
-    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 05;
-    padding: 0;
+    background-color: black;
+    color: white;
 }
 
-header {
-    background-color: #177ec8;
-
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white; /* Changed color to black */
     padding: 10px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 5; 
-    padding: 5;
+.top-nav .login-box {
+    margin-left: 15px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-    text-align: "none";
-}
-
-nav ul li a {
+.top-nav a {
+    color: white;
     text-decoration: none;
-    color: #333333;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.booking {
-    max-width: 800px;
-    margin: 40px auto;
+.top-nav a:hover {
+    background-color: white; /* Changed hover color to white */
+    color: black; /* Changed text color on hover */
+}
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: white; /* Changed color to black */
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black; /* Changed text color to white */
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: black; /* Changed hover color to white */
+    color: white; /* Changed text color on hover */
+}
+
+.content {
+    margin-left: 250px;
     padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+    flex: 1;
 }
 
-form label {
-    display: legacy;
-    margin-bottom: 5px;
+.login-box {
+    background-color: black ; /* Changed color to red */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-form input,
-form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+.login-box a {
+    color: white;
+    text-decoration: none;
 }
 
-form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.login-box a:hover {
+    color: white;
 }
 
-footer {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: none;
-    margin-inline-end: 0%;
-    
+.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.list-unstyled li a {
+    display: block;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.list-unstyled li a:hover {
+    background-color: white; /* Changed hover color to white */
+    color: black; /* Changed text color on hover */
 }
